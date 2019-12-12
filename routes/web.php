@@ -11,13 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
-
+Route::get('/', 'BlogController@index');
+Route::resource('posts', 'PostController');
+Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home');
-//Route::resource('/post', 'PostsController@index');
 
 

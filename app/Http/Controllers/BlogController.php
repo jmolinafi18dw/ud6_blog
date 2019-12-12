@@ -13,11 +13,10 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $posts=Post::latest('published_at')->get();
-        $categories=Category::all();
-        return view('welcome'.compact('posts', 'categories'));
+        public function index(){
+            $posts=Post::latest('published_at')->get();
+            $categiries=Category::all();
+            return view ('welcome', compact('posts', 'categories'));
     }
 
     /**
