@@ -40,7 +40,7 @@ class User extends Authenticatable
 
     public function sendEmailVerificationNotification()
     {
-        $this-> notify (new VerifyEmailVerification)
+        $this-> notify (new VerifyEmailVerification);
     }
 
 }
