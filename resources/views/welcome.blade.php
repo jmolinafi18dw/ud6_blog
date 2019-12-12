@@ -1,5 +1,5 @@
 @include('layouts/header')
 
-@include('layouts/app')
+@include('layouts/page')
 
 @include('layouts/footer')

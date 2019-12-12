@@ -15,9 +15,9 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $post=Post::latest('published_at')->get();
-        $category=Category::all();
-        return view(welcome);
+        $posts=Post::latest('published_at')->get();
+        $categories=Category::all();
+        return view('welcome'.compact('posts', 'categories'));
     }
 
     /**
